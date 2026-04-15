@@ -4,7 +4,7 @@ Efficiency analysis of 4,572 U.S. hospitals across 15 years using Data Envelopme
 
 ## Problem
 
-Healthcare systems face growing pressure to reduce costs while maintaining quality. With thousands of hospitals operating under different conditions, identifying which ones are truly efficient — and which are at risk — requires multi-dimensional analysis beyond simple financial metrics.
+Healthcare systems face growing pressure to reduce costs while maintaining quality. With thousands of hospitals operating under different conditions, identifying which ones are truly efficient and which are at risk and requires requires multi-dimensional analysis beyond simple financial metrics.
 
 ## Approach
 
