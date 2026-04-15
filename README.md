@@ -88,25 +88,6 @@ python src/visualizations.py       # ~5 sec: Create dashboards
 
 ---
 
-## 📖 Documentation
-
-| File | Purpose |
-|------|---------|
-| **README.md** | This overview |
-| **GETTING_STARTED.md** | Setup & how to run |
-| **COLUMN_MAPPING_REFERENCE.md** | All column definitions |
-
----
-
-## 🎯 For Judges
-
-1. Open dashboards in browser
-2. Show dashboards: 01, 03, 08
-3. Highlight: 359 hospitals at risk
-4. Note: Data source on each chart
-5. Demo: Interactive features
-
----
 
 ## 🔧 Data Sources
 
@@ -118,12 +99,3 @@ python src/visualizations.py       # ~5 sec: Create dashboards
 All from CMS public reporting.
 
 ---
-
-## ✅ Status
-
-- ✅ Efficiency scores calculated (DEA-CCR)
-- ✅ 10 dashboards generated
-- ✅ User-friendly labels + data attribution
-- ✅ Ready to present
-
-**Last Updated:** February 7, 2026
