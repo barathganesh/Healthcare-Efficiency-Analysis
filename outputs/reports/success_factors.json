@@ -1,0 +1,261 @@
+{
+  "analysis_title": "Hospital Success Factor Analysis",
+  "total_observations": 57753,
+  "study_period": "2007-2021",
+  "success_categorization": {
+    "definition": "Top 2 experience quartiles (Q3+Q4) with positive operating margin",
+    "successful_hospitals": 21163,
+    "unsuccessful_hospitals": 36291,
+    "success_rate_pct": 36.8
+  },
+  "key_metrics_comparison": {
+    "beds_adultped_wtd": {
+      "successful_mean": 105.26,
+      "unsuccessful_mean": 163.29,
+      "difference": -58.03,
+      "percent_difference": "-35.54",
+      "t_statistic": -21.918,
+      "p_value": "4.75e-106",
+      "cohens_d": -0.19,
+      "significant": "Yes"
+    },
+    "icu_beds_wtd": {
+      "successful_mean": 16.39,
+      "unsuccessful_mean": 25.93,
+      "difference": -9.54,
+      "percent_difference": "-36.78",
+      "t_statistic": -2.801,
+      "p_value": "5.10e-03",
+      "cohens_d": -0.024,
+      "significant": "Yes"
+    },
+    "margin": {
+      "successful_mean": 0.11,
+      "unsuccessful_mean": -1233.07,
+      "difference": 1233.18,
+      "percent_difference": "100.01",
+      "t_statistic": 0.769,
+      "p_value": "4.42e-01",
+      "cohens_d": 0.007,
+      "significant": "No"
+    },
+    "experience_score": {
+      "successful_mean": 2.69,
+      "unsuccessful_mean": 2.57,
+      "difference": 0.11,
+      "percent_difference": "4.46",
+      "t_statistic": 162.939,
+      "p_value": "0.00e+00",
+      "cohens_d": 1.409,
+      "significant": "Yes"
+    },
+    "clinical_risk_score": {
+      "successful_mean": 0.13,
+      "unsuccessful_mean": 0.13,
+      "difference": -0.0,
+      "percent_difference": "-1.71",
+      "t_statistic": -10.308,
+      "p_value": "1.33e-24",
+      "cohens_d": -0.373,
+      "significant": "Yes"
+    },
+    "process_quality_score": {
+      "successful_mean": 0.88,
+      "unsuccessful_mean": 0.88,
+      "difference": 0.0,
+      "percent_difference": "0.24",
+      "t_statistic": 16.759,
+      "p_value": "6.89e-63",
+      "cohens_d": 0.145,
+      "significant": "Yes"
+    },
+    "ami_mort_rate": {
+      "successful_mean": 0.14,
+      "unsuccessful_mean": 0.14,
+      "difference": -0.0,
+      "percent_difference": "-1.01",
+      "t_statistic": -2.637,
+      "p_value": "8.40e-03",
+      "cohens_d": -0.095,
+      "significant": "Yes"
+    },
+    "hf_mort_rate": {
+      "successful_mean": 0.12,
+      "unsuccessful_mean": 0.12,
+      "difference": 0.0,
+      "percent_difference": "1.0",
+      "t_statistic": 1.861,
+      "p_value": "6.29e-02",
+      "cohens_d": 0.067,
+      "significant": "No"
+    },
+    "pn_mort_rate": {
+      "successful_mean": 0.14,
+      "unsuccessful_mean": 0.15,
+      "difference": -0.01,
+      "percent_difference": "-3.41",
+      "t_statistic": -4.923,
+      "p_value": "8.86e-07",
+      "cohens_d": -0.178,
+      "significant": "Yes"
+    },
+    "all_readm_rate": {
+      "successful_mean": 0.15,
+      "unsuccessful_mean": 0.15,
+      "difference": -0.0,
+      "percent_difference": "-2.51",
+      "t_statistic": -11.02,
+      "p_value": "7.78e-28",
+      "cohens_d": -0.399,
+      "significant": "Yes"
+    }
+  },
+  "success_factors_ranked": {
+    "experience_score": {
+      "correlation": 0.556,
+      "p_value": "0.00e+00",
+      "significant": "Yes",
+      "abs_correlation": 0.5563424319182895
+    },
+    "all_readm_rate": {
+      "correlation": -0.173,
+      "p_value": "7.78e-28",
+      "significant": "Yes",
+      "abs_correlation": 0.17309068851631187
+    },
+    "clinical_risk_score": {
+      "correlation": -0.162,
+      "p_value": "1.33e-24",
+      "significant": "Yes",
+      "abs_correlation": 0.1622121368917388
+    },
+    "hf_readm_rate": {
+      "correlation": -0.158,
+      "p_value": "1.68e-23",
+      "significant": "Yes",
+      "abs_correlation": 0.15832366200660042
+    },
+    "pn_readm_rate": {
+      "correlation": -0.139,
+      "p_value": "2.42e-18",
+      "significant": "Yes",
+      "abs_correlation": 0.13865296281332526
+    },
+    "ami_readm_rate": {
+      "correlation": -0.117,
+      "p_value": "2.17e-13",
+      "significant": "Yes",
+      "abs_correlation": 0.11662859775294487
+    },
+    "beds_adultped_wtd": {
+      "correlation": -0.091,
+      "p_value": "2.45e-105",
+      "significant": "Yes",
+      "abs_correlation": 0.09051805123248695
+    },
+    "pn_mort_rate": {
+      "correlation": -0.078,
+      "p_value": "8.87e-07",
+      "significant": "Yes",
+      "abs_correlation": 0.07827135726521839
+    },
+    "process_quality_score": {
+      "correlation": 0.069,
+      "p_value": "6.24e-62",
+      "significant": "Yes",
+      "abs_correlation": 0.06902152075882703
+    },
+    "ami_mort_rate": {
+      "correlation": -0.042,
+      "p_value": "8.40e-03",
+      "significant": "Yes",
+      "abs_correlation": 0.04201655852893361
+    },
+    "hf_mort_rate": {
+      "correlation": 0.03,
+      "p_value": "6.29e-02",
+      "significant": "No",
+      "abs_correlation": 0.029660444193236622
+    },
+    "icu_beds_wtd": {
+      "correlation": -0.012,
+      "p_value": "4.93e-03",
+      "significant": "Yes",
+      "abs_correlation": 0.011699619690555475
+    },
+    "margin": {
+      "correlation": 0.003,
+      "p_value": "4.42e-01",
+      "significant": "No",
+      "abs_correlation": 0.003223752857382696
+    }
+  },
+  "analysis_by_hospital_size": {
+    "Small": {
+      "successful_count": 14743,
+      "unsuccessful_count": 15411,
+      "total": 30154,
+      "success_rate_pct": 48.9,
+      "avg_experience_score_successful": 2.7,
+      "avg_margin_successful": 0.11,
+      "avg_quality_score_successful": 0.88
+    },
+    "Medium": {
+      "successful_count": 5578,
+      "unsuccessful_count": 18436,
+      "total": 24014,
+      "success_rate_pct": 23.2,
+      "avg_experience_score_successful": 2.65,
+      "avg_margin_successful": 0.1,
+      "avg_quality_score_successful": 0.88
+    },
+    "Large": {
+      "successful_count": 842,
+      "unsuccessful_count": 2444,
+      "total": 3286,
+      "success_rate_pct": 25.6,
+      "avg_experience_score_successful": 2.65,
+      "avg_margin_successful": 0.1,
+      "avg_quality_score_successful": 0.88
+    }
+  },
+  "best_practices": {
+    "patient_experience": {
+      "avg_score": 2.69,
+      "percentile": "Top 50%",
+      "key_insight": "Successful hospitals prioritize patient satisfaction consistently"
+    },
+    "clinical_quality": {
+      "avg_risk_score": 0.13,
+      "avg_quality_score": 0.88,
+      "key_insight": "Strong clinical outcomes go hand-in-hand with patient satisfaction"
+    },
+    "financial_health": {
+      "avg_margin": 0.11,
+      "positive_margin_hospitals": 21160,
+      "key_insight": "Successful hospitals maintain positive financial margins"
+    },
+    "operational_efficiency": {
+      "avg_beds": 105.0,
+      "key_insight": "Success is achievable across all hospital sizes"
+    },
+    "patient_safety": {
+      "avg_ami_mortality": 0.14,
+      "key_insight": "Low mortality rates correlate with successful operations"
+    },
+    "patient_retention": {
+      "avg_readmission_rate": 0.15,
+      "key_insight": "Successful hospitals manage readmissions effectively"
+    }
+  },
+  "key_insights": [
+    "Most critical success factor: experience_score (correlation: 0.556)",
+    "Highest success rate: Small-sized hospitals (48.9% success rate)",
+    "Successful hospitals have 1233.18 better operating margins than unsuccessful ones",
+    "Successful hospitals score 0.0 points higher in process quality",
+    "Patient experience scores are 0.11 points higher in successful hospitals",
+    "Better clinical risk management correlates with overall hospital success",
+    "Success requires alignment of patient experience, clinical quality, and financial performance",
+    "Successful hospitals treat patient satisfaction as a strategic asset, not a cost center"
+  ]
+}

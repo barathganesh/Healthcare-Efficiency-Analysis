@@ -1,0 +1,228 @@
+======================================================================
+  PRESENTATION SUMMARY
+  Healthcare Analytics — Saving Lives, Saving Dollars
+  File: outputs/Healthcare_Analytics_FINAL_v2.pptx
+  Total Slides: 21
+======================================================================
+
+----------------------------------------------------------------------
+  SLIDE 1 of 21
+----------------------------------------------------------------------
+    Saving Lives, Saving Dollars:
+    A Data-Driven Roadmap for Hospital Excellence
+    $2.44B Saved | 76,182 Lives Saved | 232 Hospitals Transformed
+    University of Minnesota | Healthcare Analytics Case Competition | February 2026
+
+----------------------------------------------------------------------
+  SLIDE 2 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    The Burning Platform: Operational Inefficiency is Costing Lives
+    THE PROBLEM:
+    • 232 non-safety-net hospitals at risk (efficiency <75%, mortality >15%)
+    • 99%+ of safety-net hospitals below efficiency frontier
+    • $2.44B wasted annually on operational inefficiency
+    • 76,182 preventable deaths every year
+    THE VALUE WE DELIVER:
+    • Every dollar quantified — clear ROI for each hospital
+    • Lives saved mapped to specific clinical improvements
+    • 232 hospital-specific action plans (ready to implement)
+    • Clear roadmap from strugglers to heroes
+
+----------------------------------------------------------------------
+  SLIDE 3 of 21
+----------------------------------------------------------------------
+    Data Collection: Phase 1 - Acquisition
+    DATA SOURCES:
+    • HCRIS Cost Reports: 158,688 hospital-years, 621 variables
+    • CMS Quality Metrics: Mortality & readmission rates
+    • 6 medical conditions (AMI, HF, PN, COPD, STK, CABG)
+    • Non-Safety-Net Study: 4,339 hospitals (2008-2021)
+    TOTAL: 163,027 hospital-years analyzed
+
+----------------------------------------------------------------------
+  SLIDE 4 of 21
+----------------------------------------------------------------------
+    Data Collection: Phase 2 - Preparation
+    DATA CLEANING:
+    • Remove outliers, missing values, validate consistency
+    VARIABLE ENGINEERING:
+    • Medicaid share, efficiency ratios, quality scores
+    HOSPITAL CLASSIFICATION:
+    • Safety-Net: Medicaid ≥18%
+    • Hero: Top 25% efficiency | Struggler: Bottom 25%
+
+----------------------------------------------------------------------
+  SLIDE 5 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    Analysis: Four Rigorous Methods
+    METHOD 1: DEA - 30+ models, <1% truly efficient
+    METHOD 2: REGRESSION - Size is the #1 driver (p<0.001)
+    METHOD 3: ML - 99%+ classification accuracy
+    METHOD 4: OPTIMIZATION - 232 hospital prescriptions
+
+----------------------------------------------------------------------
+  SLIDE 6 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    Finding 1: Bigger Isn't Better
+    • Statistically proven: size hurts efficiency (p<0.001)
+    • Every 100 extra beds → ~11% efficiency drop
+    • Heroes avg 63 beds vs Strugglers 325 beds (5× larger)
+    IMPLICATION: Stop incentivizing consolidation — smaller is more efficient
+
+----------------------------------------------------------------------
+  SLIDE 7 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    Finding 2: The Occupancy Paradox
+    • Higher occupancy → LOWER efficiency
+    • Safety-net heroes: 35.9% | Strugglers: 64.1%
+    • Creates congestion, delays, errors
+    IMPLICATION: Build surge capacity — heroes run at ~35-40% occupancy
+
+----------------------------------------------------------------------
+  SLIDE 8 of 21
+----------------------------------------------------------------------
+    Finding 3: Admin Cost Myth Busted
+    • p=0.170 (NOT significant)
+    • Hero: 13.2% | Struggler: 12.8%
+    IMPLICATION: Admin is NOT the problem — focus on size, occupancy & revenue
+
+----------------------------------------------------------------------
+  SLIDE 9 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    Finding 4: Revenue Optimization
+    • Heroes: $131K/discharge | Strugglers: $54K (2.4x)
+    • Net income: $22K vs $1.9K (11.6x!)
+    Strategic Pivot: Revenue Integrity Over Cost Cutting
+
+----------------------------------------------------------------------
+  SLIDE 10 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    Financial Impact: $2.44B Saved
+    BREAKDOWN:
+    • Readmission Savings: $1.43B (58%)
+    • Revenue Optimization: $0.81B (33%)
+    • Admin Efficiency: $0.20B (8%)
+    • Workforce Rebalancing: cost-neutral
+    MARGIN: 3.1% → 19.6% (+16.5 points)
+
+----------------------------------------------------------------------
+  SLIDE 11 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    Clinical Impact: 76,182 Lives Saved
+    BY CONDITION:
+    • Top 3: AMI (18,500) + Heart Failure (15,200) + Pneumonia (12,800)
+    • Plus COPD, Stroke, CABG = 29,682 additional lives
+    QUALITY:
+    • Mortality: 15.7% → 10.1% (36% reduction)
+    • Readmission: 21.4% → 14.3% (33% reduction)
+
+----------------------------------------------------------------------
+  SLIDE 12 of 21
+----------------------------------------------------------------------
+    Root Cause Analysis
+    1. STRUCTURAL INEFFICIENCY - Size creates complexity
+    2. CAPACITY MISMANAGEMENT - Congestion from wrong occupancy levels
+    3. REVENUE DYSFUNCTION - Half the revenue per discharge
+    4. WORKFORCE OPTIMIZATION - Staffing mix misaligned vs hero benchmarks (109 hospitals)
+    5. LACK OF DATA - Decisions based on intuition, not data
+
+----------------------------------------------------------------------
+  SLIDE 13 of 21
+----------------------------------------------------------------------
+    Short-Term Recommendations (0-12 Months)
+    SAFETY-NET:
+    • Freeze consolidation, maintain 60%+ surge capacity
+    NON-SAFETY-NET:
+    • Implement 232 prescriptions, optimize revenue
+    • Optimize staffing mix, increase volume
+    IMPACT: $10.5M savings, 329 lives per hospital
+
+----------------------------------------------------------------------
+  SLIDE 14 of 21
+----------------------------------------------------------------------
+    Long-Term Recommendations (1-3 Years)
+    SAFETY-NET:
+    • Right-size to 60-80 beds, build 60%+ surge capacity
+    NON-SAFETY-NET:
+    • Build analytics, develop service line excellence
+    POLICYMAKERS:
+    • End consolidation incentives
+    • Pair efficiency mandates with financial support
+
+----------------------------------------------------------------------
+  SLIDE 15 of 21
+----------------------------------------------------------------------
+    Implementation Plan
+    PHASE 1 (0–3 months): Assessment & Quick Wins
+    • Baseline data, stakeholder buy-in, early wins
+    PHASE 2 (3–12 months): Core Transformation
+    • Revenue optimization, workforce rebalancing
+    PHASE 3 (Year 2–3): Sustainability & Market Leadership
+    • Deepen analytics, expand best practices, build sustainability
+
+----------------------------------------------------------------------
+  SLIDE 16 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    HR 1 Stress Test
+    SCENARIO: $1 trillion in funding cuts
+    RESULTS:
+    • Optimization helps but doesn't fully offset
+    • Some hospitals still face negative margins
+    RECOMMENDATION:
+    • Combine efficiency mandates with financial support
+    • Don't rely on optimization alone
+
+----------------------------------------------------------------------
+  SLIDE 17 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    Geographic Impact: 42 States
+    TOP 5 STATES (Lives Saved):
+    • California: ~8,100 | New York: ~6,600
+    • Arkansas: ~5,500 | Georgia: ~5,300
+    TOP 5 STATES (Savings):
+    • Georgia: $194M | California: $192M
+    • New York: $163M | Virginia: $141M
+
+----------------------------------------------------------------------
+  SLIDE 18 of 21
+----------------------------------------------------------------------
+    Why This Analysis Wins
+    1. SCALE: 163,027 hospital-years (largest ever)
+    2. RIGOR: 4 methods, all confirm findings
+    3. MYTH-BUSTING: Size ≠ strength, occupancy ≠ revenue, admin ≠ root cause
+    4. QUANTIFIED: $2.44B, 76,182 lives, 232 prescriptions
+    5. POLICY RELEVANT: HR 1 simulation, timely
+
+----------------------------------------------------------------------
+  SLIDE 19 of 21  [contains chart/image]
+----------------------------------------------------------------------
+    Conclusion: The Choice Before Us
+    THE EVIDENCE: 163,027 hospital-years, 4 methods
+    THE PATH:
+    • Safety-Net: Stop consolidating, reduce occupancy
+    • Non-Safety-Net: Optimize revenue, rebalance staff
+    THE IMPACT: $2.44B + 76,182 lives + 232 hospitals
+    THE QUESTION: Not 'Can we afford to act?' but 'Can we afford not to?'
+    The model works. The path is clear.
+
+----------------------------------------------------------------------
+  SLIDE 20 of 21
+----------------------------------------------------------------------
+    References
+    [1]  Shen, Y., Sarazin, M., & Li, Y. (2025). A comparative inpatient care efficiency analysis of safety-net vs. non-safety-net hospitals. Health Care Management Science, 28, 178–190.
+    [2]  Charnes, A., Cooper, W. W., & Rhodes, E. (1978). Measuring the efficiency of decision making units. European Journal of Operational Research, 2(6), 429–444.
+    [3]  Banker, R. D., Charnes, A., & Cooper, W. W. (1984). Some models for estimating technical and scale inefficiencies in data envelopment analysis. Management Science, 30(9), 1078–1092.
+    [4]  Buchmueller, T. C., Jacobson, M., & Wold, C. (2006). How far to the hospital? The effect of hospital closures on access to care. Journal of Health Economics, 25(4), 740–761.
+    [5]  CMS Hospital Cost Reports (HCRIS): 158,688 hospital-years, 621 variables (2008–2021).
+    [6]  CMS Hospital Compare: HCAHPS Patient Experience, Mortality & Readmission, Process of Care Measures.
+    [7]  CMS Hospital Readmissions Reduction Program (HRRP): Readmission cost benchmarks.
+    [8]  American Hospital Association (AHA): Community hospital employment benchmarks.
+
+----------------------------------------------------------------------
+  SLIDE 21 of 21
+----------------------------------------------------------------------
+    163,000 hospital-years of evidence.
+    232 ready-to-implement prescriptions.
+    $2.44 billion in savings, quantified.
+    76,182 lives are waiting. Let's get to work.
+    Thank You | Questions?

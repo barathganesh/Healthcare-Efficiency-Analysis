@@ -1,0 +1,123 @@
+
+================================================================================
+SECOND-STAGE REGRESSION ANALYSIS — NON-SAFETY-NET HOSPITALS
+Updated Model with Systematic Variable Selection (20 variables)
+================================================================================
+
+METHODOLOGY
+───────────
+After computing hospital-level DEA efficiency scores (input-oriented VRS),
+we ran second-stage regressions to identify determinants of efficiency.
+
+Variable selection process:
+  1. Inventoried all 635 columns → 608 numeric candidates
+  2. Filtered to 191 variables with ≥70% non-missing coverage
+  3. Removed duplicate _min/_max/_wtd triplicates → 133 unique variables
+  4. Correlation analysis: identified massive multicollinearity (65+ pairs |r|>0.90)
+  5. Selected 1 representative per cluster + theoretically motivated additions
+  6. Ran 6 progressive models (A→F) to find optimal variable set
+
+PROGRESSIVE MODEL COMPARISON
+─────────────────────────────
+  Model A (Original 8 vars):      R² = 0.496  N = 41,809  (baseline)
+  Model B (+3 financial):          R² = 0.522  N = 39,106  (+0.026)
+  Model C (+3 staffing/assets):    R² = 0.522  N = 38,944  (+0.000)
+  Model D (+3 HCAHPS quality):     R² = 0.577  N = 36,106  (+0.055)
+  Model E (+3 outcomes/CMI):       R² = 0.665  N = 25,590  (+0.088) ← SELECTED
+  Model F (+6 kitchen sink):       R² = 0.665  N = 25,590  (+0.000)
+
+Key insight: HCAHPS patient experience (+5.5%) and clinical outcomes/CMI (+8.8%)
+are the biggest drivers of explained variance. Adding more variables beyond 20
+provides zero additional explanatory power.
+
+SELECTED MODEL (Model E): 20 VARIABLES + YEAR FIXED EFFECTS
+────────────────────────────────────────────────────────────
+
+  Category              Variable          Source Column
+  ─────────────────────────────────────────────────────
+  Hospital Size         beds              beds_adultped_wtd
+                        discharges_k      ipdischarges_adultped / 1000
+
+  Financial             cost_m            totcost / 1e6
+                        revenue_m         tottotrev / 1e6
+                        margin_pct        margin * 100
+                        ccr               ccr_wtd
+                        wage_cost_m       wage_cost_core / 1e6
+                        cash_reserves_m   cash_general_wtd / 1e6
+
+  Balance Sheet         total_assets_m    tot_asset_general_wtd / 1e6
+                        total_liab_m      tot_liab_general_wtd / 1e6
+
+  Staffing              fte_employees     fte_employee_payroll_wtd
+
+  Demographics          medicaid_pct      medicaid_share * 100
+                        is_teaching       teaching_ind == 'Y'
+                        is_rural          rural_ind == 2.0
+
+  Patient Experience    overall_hcahps    overall_score
+  (HCAHPS)             clean_score_v     clean_score
+                        recommend_v       recommend_score
+
+  Clinical Outcomes     hf_readm          hf_readm_rate
+                        pn_mort           pn_mort_rate
+                        cmi               tacmiv (case mix index)
+
+RESULTS
+───────
+
+  OLS (Primary):
+    R² = 0.6648 | Adjusted R² = 0.6644 | N = 25,590
+    Robust standard errors (HC1)
+    AIC = 185,552
+
+  Tobit (Upper-censored at 100):
+    Converged: Yes | Sigma = 9.072 | N = 25,590
+    Accounts for 1.8% of observations at the efficiency frontier (score=100)
+
+  Logistic (Top-quartile classifier):
+    Pseudo R² = 0.4663 | N = 25,590
+    Binary: is_efficient = 1 if efficiency ≥ 75th percentile
+
+  Direction Agreement: 18/20 variables (90%) agree across all 3 models
+  Disagreements: total_assets_m, total_liab_m (small coefficients, sensitive to model)
+
+KEY FINDINGS (OLS COEFFICIENTS)
+───────────────────────────────
+
+  POSITIVE effects on efficiency (higher score):
+    discharges_k     +3.565***  More discharges → higher efficiency
+    revenue_m        +0.009***  Higher revenue → higher efficiency
+    margin_pct       +0.100***  Better margins → higher efficiency
+    medicaid_pct     +0.026*    Higher Medicaid share → slightly higher efficiency
+    recommend_v      +8.752***  Higher patient recommendation → higher efficiency
+
+  NEGATIVE effects on efficiency (lower score):
+    beds             -0.136***  More beds → lower efficiency (overcapacity)
+    cost_m           -0.070***  Higher costs → lower efficiency
+    ccr              -25.97***  Higher cost-to-charge ratio → much lower efficiency
+    is_teaching      -1.464***  Teaching hospitals → 1.5 pts less efficient
+    is_rural         -1.087***  Rural hospitals → 1.1 pts less efficient
+    overall_hcahps   -8.197***  Higher overall HCAHPS → lower efficiency (counterintuitive*)
+    clean_score_v    -5.710***  Higher cleanliness → lower efficiency
+    hf_readm         -27.92***  Higher HF readmission → much lower efficiency
+    pn_mort          -12.61***  Higher PN mortality → lower efficiency
+    cmi              -3.683***  Higher case mix → lower efficiency (sicker patients)
+
+  NOT SIGNIFICANT:
+    wage_cost_m      -0.004     p=0.328
+    cash_reserves_m  +0.001     p=0.181
+    fte_employees    -0.000     p=0.119
+
+  * The negative HCAHPS overall score / positive recommend score reflects
+    multicollinearity among HCAHPS sub-scales. Net effect of patient experience
+    is positive (recommend dominates).
+
+YEAR FIXED EFFECTS (reference = 2008)
+──────────────────────────────────────
+  Notable years:
+    2011: +6.40***  (efficiency peak before ACA changes)
+    2016: -9.39***  (major efficiency decline)
+    2018: -5.77***  (another decline)
+    2020: +4.20***  (COVID year — efficiency gains from reduced elective care)
+
+================================================================================

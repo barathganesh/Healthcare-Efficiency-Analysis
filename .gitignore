@@ -1,0 +1,10 @@
+.venv/
+.DS_Store
+__pycache__/
+data/
+*.pptx
+*.docx
+_archived_docs/
+*.pyc
+.env
+outputs/figures/

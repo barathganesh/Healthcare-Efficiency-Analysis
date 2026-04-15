@@ -1,0 +1,216 @@
+============================================================
+  VISUALIZATION INDEX — Healthcare Analytics (Shen et al. 2025)
+============================================================
+
+This folder contains 10 publication-quality visualizations generated
+by src/step19_visualizations.py. Each chart is designed to convey a
+key finding from the analysis and can be directly inserted into slides.
+
+
+─────────────────────────────────────────────────────────
+01  VALUE FRAMEWORK SCATTER
+    File: 01_value_framework.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      Every hospital plotted on Clinical Quality (Y) vs
+      Equity Contribution / Medicaid Share (X), colored by
+      Hero (green), Middle (grey), and Struggler (red).
+
+    Key takeaway:
+      Heroes cluster in the upper-right (high quality + high
+      equity), while Strugglers concentrate at lower quality.
+      This visualizes the paper's Value = Quality + Equity
+      framework.
+
+    Data source: merged_hospital_data.parquet (4,104 hospitals)
+    Slide use: Opening/framework slide
+
+
+─────────────────────────────────────────────────────────
+02  CLOSURE RISK MAP (US CHOROPLETH)
+    File: 02_closure_risk_map.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      US state-level map shaded by number of Struggler
+      hospitals per state, highlighting geographic
+      concentration of at-risk facilities.
+
+    Key takeaway:
+      232 Struggler hospitals span 42 states. States with
+      the highest counts face the most disruption from
+      potential Medicaid funding cuts.
+
+    Data source: struggler_stress_test_detail.csv (232 hospitals)
+    Slide use: Policy/geographic impact slide
+
+
+─────────────────────────────────────────────────────────
+03  STRESS TEST — BEFORE vs AFTER OPTIMIZATION
+    File: 03_stress_test_before_after.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      Grouped bar chart showing hospitals at risk of closure
+      and negative margins under 4 Medicaid/Medicare cut
+      scenarios, comparing outcomes WITH vs WITHOUT
+      optimization.
+
+    Key takeaway:
+      Optimization dramatically reduces closure risk and
+      negative-margin hospitals across all scenarios.
+      E.g., under 10% Medicaid cut, closures drop from 35
+      to 6 with optimization.
+
+    Data source: stress_test_summary.csv
+    Slide use: Stress test results / policy resilience slide
+
+
+─────────────────────────────────────────────────────────
+04  LIVES SAVED — AMI + HF + PNEUMONIA
+    File: 04_lives_saved.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      Horizontal bar chart of potential lives saved per
+      year if Strugglers adopted Hero-level mortality rates,
+      broken out by condition (AMI, Heart Failure, Pneumonia).
+
+    Key takeaway:
+      Up to 1,377 lives/year could be saved: 493 AMI,
+      391 HF, 493 PN — demonstrating the human cost of the
+      quality gap.
+
+    Data source: total_impact_summary.csv
+    Slide use: Clinical impact / "why this matters" slide
+
+
+─────────────────────────────────────────────────────────
+05  COST SAVINGS BREAKDOWN
+    File: 05_cost_savings_breakdown.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      Horizontal bar chart of net financial impact across
+      optimization categories (cost reduction, revenue
+      optimization, readmission savings, implementation
+      cost).
+
+    Key takeaway:
+      Net savings of $2.44 billion across 232 Struggler
+      hospitals. Revenue optimization is the largest
+      driver; implementation cost is a small offset.
+
+    Data source: total_impact_summary.csv
+    Slide use: Financial impact / ROI slide
+
+
+─────────────────────────────────────────────────────────
+06  HERO vs STRUGGLER RADAR CHART
+    File: 06_hero_vs_struggler_radar.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      Six-axis radar comparing Heroes and Strugglers on:
+      Revenue-to-Cost Ratio, Bed Occupancy, Case Mix Index,
+      AMI Survival, HF Survival, PN Survival (mortality
+      rates inverted so outward = better).
+
+    Key takeaway:
+      Heroes outperform Strugglers on ALL six dimensions,
+      with the biggest gaps in financial efficiency and
+      survival rates.
+
+    Data source: hero_vs_struggler_comparison.csv
+    Slide use: Multi-dimensional comparison / profile slide
+
+
+─────────────────────────────────────────────────────────
+07  MARGIN DISTRIBUTION — BEFORE vs AFTER OPTIMIZATION
+    File: 07_margin_before_after.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      Overlapping KDE density plots of operating margin for
+      232 Struggler hospitals, before (baseline) and after
+      (post-optimization).
+
+    Key takeaway:
+      Median margin shifts from 3.1% to 19.6% after
+      optimization. The entire distribution moves right,
+      virtually eliminating negative-margin hospitals.
+
+    Data source: struggler_optimization_prescriptions.csv
+    Slide use: Financial transformation / "proof it works" slide
+
+
+─────────────────────────────────────────────────────────
+08  ML FEATURE IMPORTANCE — TOP 15
+    File: 08_ml_feature_importance.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      Horizontal bar chart of top 15 features from the
+      Random Forest + Gradient Boosting classifier (99.4%
+      accuracy). Green bars = higher value → Hero;
+      Red bars = lower value → Hero.
+
+    Key takeaway:
+      Revenue-to-Cost Ratio, Revenue per Discharge, and
+      Annual Discharges are the strongest predictors.
+      Readmission/mortality rates also matter — confirming
+      that Heroes excel at both finance and quality.
+
+    Data source: ml_feature_importance.csv
+    Slide use: ML methodology / "what drives performance" slide
+
+
+─────────────────────────────────────────────────────────
+09  STATE-LEVEL IMPACT MAP
+    File: 09_state_impact_map.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      US choropleth shaded by total potential lives saved
+      per state if Struggler hospitals adopt Hero-level
+      performance.
+
+    Key takeaway:
+      76,182 total lives at stake across 42 states.
+      States with more Strugglers (e.g., TX, CA, FL) show
+      the highest potential impact.
+
+    Data source: struggler_optimization_by_state.csv
+    Slide use: Geographic impact / lives-saved slide
+
+
+─────────────────────────────────────────────────────────
+10  CLINICAL QUALITY GAP — MORTALITY & READMISSION
+    File: 10_clinical_quality_gap.png
+─────────────────────────────────────────────────────────
+    What it shows:
+      Paired bar chart showing Hero vs Struggler mean
+      rates for 6 metrics: AMI/HF/PN Mortality and
+      AMI/HF/PN Readmission. Gap annotations show the
+      percentage-point difference.
+
+    Key takeaway:
+      Strugglers have consistently higher mortality and
+      readmission rates across all conditions. The gap
+      is the quantifiable opportunity for improvement.
+
+    Data source: hero_vs_struggler_comparison.csv
+    Slide use: Clinical gap / problem-definition slide
+
+
+============================================================
+  SUGGESTED SLIDE ORDER FOR A PRESENTATION
+============================================================
+
+  1. 01_value_framework.png       — Framework: what is "value"?
+  2. 06_hero_vs_struggler_radar   — Hero vs Struggler profile
+  3. 10_clinical_quality_gap      — The clinical gap
+  4. 08_ml_feature_importance     — What drives the gap (ML)
+  5. 02_closure_risk_map          — Where Strugglers are located
+  6. 03_stress_test_before_after  — What happens under funding cuts
+  7. 07_margin_before_after       — Financial transformation
+  8. 05_cost_savings_breakdown    — Dollar impact
+  9. 04_lives_saved               — Lives impact
+ 10. 09_state_impact_map          — State-level opportunity
+
+============================================================
+  Generated by: src/step19_visualizations.py
+  Last updated: See file timestamps
+============================================================

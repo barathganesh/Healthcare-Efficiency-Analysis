@@ -1,0 +1,40 @@
+
+RURAL VS URBAN HOSPITAL ANALYSIS - SUMMARY REPORT
+======================================================================
+
+1. SUCCESS RATE COMPARISON
+   Rural Success Rate: 0.0%
+   Urban Success Rate: 0.0%
+   Gap: 0.0 percentage points
+
+2. KEY METRIC DIFFERENCES
+   (See detailed table below)
+
+3. MEDICAID CUT IMPACT (8% Cut Scenario)
+   Rural Margin Impact: 0.04% → -3.32%
+   Urban Margin Impact: -1634.96% → -1637.20%
+   
+   Rural hospitals negatively affected: More likely to go negative
+   Urban hospitals negatively affected: Some flip to negative
+
+4. AT-RISK HOSPITALS
+   Total records at HIGH risk: 55,881
+   Total records at MEDIUM risk: 1,041
+   
+   Rural HIGH risk: 29,942 (98.7%)
+   Urban HIGH risk: 25,939 (94.6%)
+
+5. INTERVENTION POTENTIAL
+   With champion playbook implementation:
+   - Experience improvement: +0.35 points
+   - Margin improvement: +2.5 percentage points
+   - Readmission reduction: -2.0 percentage points
+   - Mortality reduction: -0.05 percentage points
+
+6. FILES GENERATED
+   ✓ 01_success_rate_comparison.html
+   ✓ 02_metric_comparison_heatmap.html
+   ✓ 03_medicaid_cut_stress_test.html
+   ✓ 04_risk_distribution.html
+   ✓ 05_champion_profile_comparison.html
+   ✓ 06_before_after_intervention.html
